@@ -1,0 +1,9 @@
+.price {
+  @apply flex items-center text-3xl gap-[15px] mt-[15px];
+}
+.price__old {
+  @apply text-[rgba(1,72,58,0.6)] line-through;
+}
+.price__off {
+  @apply bg-[#adc2bd] text-xl p-2.5;
+}

@@ -1,0 +1,25 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.footer {
+  @apply grid grid-cols-[auto_auto_auto_auto] justify-center gap-2.5 mt-[60px] pb-[50px];
+}
+.footer__item {
+  @apply flex flex-col justify-center items-center;
+}
+.footer__item div {
+  @apply h-32 w-32 bg-accent flex justify-center items-center p-[25px] rounded-[50%];
+}
+.footer__item div img {
+  @apply max-h-full max-w-full;
+}
+.footer__item p {
+  @apply text-sm text-center mt-[15px];
+}
+@media screen and (max-width: 769px) {
+  .footer {
+    @apply grid-cols-[auto_auto] gap-y-7 gap-x-10 mt-[50px];
+  }
+}

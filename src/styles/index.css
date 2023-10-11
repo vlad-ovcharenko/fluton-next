@@ -1,0 +1,42 @@
+@import 'reset.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'product.css';
+@import 'dynamic-price.css';
+@import 'stars-rating.css';
+@import 'slider-images.css';
+@import 'values-list.css';
+@tailwind base;
+
+body {
+  @apply scroll-smooth text-main;
+  font-family: sans-serif;
+}
+
+.gb-page-title {
+  @apply flex justify-center items-center h-[500px] w-full text-[100px] capitalize;
+}
+
+.gb-page-container {
+  max-width: 1280px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 769px) {
+  .gb-page-container {
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.gb-hover {
+  transition: all 0.3s;
+}
+.gb-hover:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}

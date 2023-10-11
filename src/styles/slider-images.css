@@ -1,0 +1,26 @@
+.slider__slides {
+  @apply flex gap-2.5 overflow-x-auto overflow-y-hidden;
+}
+.slider__slide {
+  @apply shrink-0 w-[calc(100vw_-_130px)] box-border aspect-[6/5];
+}
+.slider__slide img {
+  @apply w-full h-full;
+}
+.slider__nav {
+  @apply flex gap-5 mt-[18px];
+}
+.slider__nav button {
+  @apply h-[30px] w-[30px] bg-[#adc2bd] cursor-pointer rounded-[50%];
+}
+.slider__nav button.active {
+  @apply bg-main;
+}
+@media screen and (max-width: 424px) {
+  .slider__slide {
+    @apply w-[calc(100vw_-_70px)];
+  }
+  .slider__nav button {
+    @apply h-2.5 w-2.5;
+  }
+}

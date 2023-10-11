@@ -1,0 +1,16 @@
+.stars {
+  @apply flex;
+}
+.stars__star {
+  @apply inline-block align-middle leading-none text-lg text-[#ababab] transition-[color] duration-[0.2s] ease-[ease-out] hover:cursor-pointer;
+}
+.stars__star--selected {
+  @apply text-accent;
+}
+.stars__star--disabled:hover {
+  @apply cursor-not-allowed;
+}
+.stars__checkbox {
+  @apply absolute overflow-hidden h-px w-px -m-px p-0 border-0;
+  clip: rect(0 0 0 0);
+}

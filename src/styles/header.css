@@ -1,0 +1,68 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.header__line {
+  @apply h-[30px] bg-main text-accent flex items-center text-[15px];
+}
+.header__line div {
+  @apply flex justify-center gap-5;
+}
+.header__content {
+  @apply h-[110px] flex items-center border-b-[solid] border-b-main;
+}
+.header__container {
+  @apply w-full flex items-center gap-2.5;
+}
+.header__burger {
+  @apply hidden h-8;
+}
+.header__nav {
+  @apply flex justify-center items-center gap-[15px] mx-auto my-0;
+}
+.header__nav a {
+  @apply flex items-center gap-2.5 h-[42px] text-[28px] px-5 py-0;
+}
+.header__nav a img {
+  @apply h-[15px];
+}
+.header__quiz {
+  @apply h-[55px] text-lg capitalize bg-accent mr-[55px] px-[25px] py-0;
+}
+.header__cart {
+  @apply h-[25px];
+}
+.header__cart img {
+  @apply h-full;
+}
+@media screen and (max-width: 1025px) {
+  .header__nav {
+    @apply gap-[5px];
+  }
+  .header__nav a {
+    @apply text-xl gap-[7px] px-2.5 py-0;
+  }
+  .header__nav a img {
+    @apply h-2.5;
+  }
+  .header__quiz {
+    @apply hidden;
+  }
+}
+@media screen and (max-width: 769px) {
+  .header__container {
+    @apply justify-between;
+  }
+  .header__nav {
+    @apply hidden;
+  }
+  .header__burger {
+    @apply block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header__line {
+    @apply text-[12px];
+  }
+}

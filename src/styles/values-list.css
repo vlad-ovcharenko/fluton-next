@@ -1,0 +1,9 @@
+.values {
+  @apply mt-5 grid grid-cols-[auto_auto] gap-x-10 justify-start;
+}
+.values li {
+  @apply ml-[15px];
+}
+.values__not-included {
+  @apply text-[rgba(1,72,58,0.6)];
+}
