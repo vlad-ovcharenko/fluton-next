@@ -23,15 +23,15 @@ const Home: React.FC = () => {
 
   const currentSizeGender = isGenderMen ? sizesMan : sizesWoman
 
-  const toggleGender = () => {
-    if (isGenderMen) {
-      setPrevManSize(currentSize)
-    } else {
+  const toggleGender = (isMan: boolean) => {
+    if (isMan) {
       setPrevWomanSize(currentSize)
+    } else {
+      setPrevManSize(currentSize)
     }
 
-    setIsGenderMen(!isGenderMen)
-    setCurrentSize(isGenderMen ? prevWomanSize : prevManSize)
+    setIsGenderMen(isMan)
+    setCurrentSize(isMan ? prevManSize : prevWomanSize)
   }
 
   return (
@@ -72,13 +72,13 @@ const Home: React.FC = () => {
         <div className="product__bool-buttons">
           <button
             className={`product__btn gb-hover ${isGenderMen ? 'product__btn--active' : ''}`}
-            onClick={() => toggleGender()}
+            onClick={() => toggleGender(true)}
           >
             Man
           </button>
           <button
             className={`product__btn gb-hover ${!isGenderMen ? 'product__btn--active' : ''}`}
-            onClick={() => toggleGender()}
+            onClick={() => toggleGender(false)}
           >
             Woman
           </button>
