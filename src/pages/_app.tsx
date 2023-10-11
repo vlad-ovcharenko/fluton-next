@@ -79,6 +79,16 @@ export default function App({Component, pageProps}: AppProps) {
             negative
           </p>
         </div>
+        <div className="footer__item footer__item--book">
+          <div>
+            <img src="/images/values/book.png" alt="" />
+          </div>
+          <p>
+            90-day comfort
+            <br />
+            guarantee
+          </p>
+        </div>
       </footer>
     </>
   )
