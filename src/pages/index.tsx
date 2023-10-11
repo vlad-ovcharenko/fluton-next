@@ -49,9 +49,12 @@ const Home: React.FC = () => {
           <a href="#">150 Reviews</a>
         </div>
         <DynamicPrice oldPrice={60} newPrice={48} />
-        <p className="product__description">
-          All day comfort and support unique to your body. Great for:
-        </p>
+        <div
+          className="product__description"
+          dangerouslySetInnerHTML={{
+            __html: '<p>All day comfort and support unique to your body. Great for:</p>',
+          }}
+        ></div>
         <ValuesList included={['Foot pain', 'Knee pain']} excluded={['Back pain', 'Alignment']} />
         <p className="product__label">Width:</p>
         <div className="product__bool-buttons">
